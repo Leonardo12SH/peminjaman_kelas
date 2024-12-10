@@ -39,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (empty($errors)) {
     if ($_POST['action'] == 'create') {
       if (createUser($username, $fullname, $password, $level)) {
-        echo "<p style='color: green;'>User berhasil ditambahkan!</p>";
+        echo "<p>User berhasil ditambahkan!</p>";
       } else {
         $errors[] = "Gagal menambahkan user.";
       }
     } elseif ($_POST['action'] == 'update') {
       if (updateUser($username, $fullname, $password, $level)) {
-        echo "<p style='color: green;'>User berhasil diperbarui!</p>";
+        echo "<p>User berhasil diperbarui!</p>";
       } else {
         $errors[] = "Gagal memperbarui user.";
       }
